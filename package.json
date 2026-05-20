@@ -1,0 +1,37 @@
+{
+  "name": "llm-test-case-generator",
+  "version": "0.1.0",
+  "description": "Generate test cases from user stories with an LLM, then evaluate the output for hallucinations and acceptance-criteria coverage.",
+  "bin": {
+    "llm-tcg": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --import tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": { "node": ">=20" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "license": "MIT",
+  "dependencies": {
+    "kleur": "^4.1.5",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "openai": "^4.71.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": { "optional": true },
+    "openai": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}

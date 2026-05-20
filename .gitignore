@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+generated*.json
+!tests/fixtures/*.json
+.DS_Store
+*.log
